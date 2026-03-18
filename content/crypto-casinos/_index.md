@@ -1,9 +1,9 @@
 ---
 title: "Crypto Casinos"
-description: "最佳加密货币赌场评测 - Stake, BC.Game, Roobet等"
+description: "Best crypto casino reviews - Stake, BC.Game, Roobet and more"
 date: 2024-01-01
 ---
 
-# Crypto Casino评测
+# Best Crypto Casino Reviews
 
-发现最佳加密货币赌博平台...
+Discover the top crypto gambling platforms with the best odds, fastest payouts, and biggest bonuses.
