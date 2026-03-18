@@ -1,0 +1,5 @@
+name = "affiliate-site"
+compatibility_date = "2023-01-01"
+
+[[pages]]
+binding = "MY_VAR"

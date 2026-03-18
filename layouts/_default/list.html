@@ -29,32 +29,38 @@
         </thead>
         <tbody>
           {{ range $index, $page := .Pages.ByParam "rating" | first 10 }}
+          {{ if $page.Params.brand }}
           <tr>
             <td class="rank">{{ add $index 1 }}</td>
             <td class="brand">
-              {{ with .Params.logo }}
-              <img src="{{ . }}" alt="{{ .Params.brand }}" class="table-logo">
+              {{ with $page.Params.logo }}
+              <img src="{{ . }}" alt="{{ $page.Params.brand }}" class="table-logo">
               {{ end }}
-              <a href="{{ .Permalink }}">{{ .Params.brand }}</a>
+              <a href="{{ $page.Permalink }}">{{ $page.Params.brand }}</a>
             </td>
             <td class="rating">
-              <span class="stars">{{ range seq (int .Params.rating) }}★{{ end }}</span>
-              <span>{{ .Params.rating }}</span>
+              {{ if $page.Params.rating }}
+              <span class="stars">{{ range seq (int $page.Params.rating) }}★{{ end }}</span>
+              <span>{{ $page.Params.rating }}</span>
+              {{ else }}
+              <span>-</span>
+              {{ end }}
             </td>
             <td class="highlights">
               <ul>
-                {{ range first 3 .Params.pros }}
+                {{ range first 3 $page.Params.pros }}
                 <li>{{ . }}</li>
                 {{ end }}
               </ul>
             </td>
-            <td class="bonus">{{ .Params.bonus_offer }}</td>
+            <td class="bonus">{{ $page.Params.bonus_offer }}</td>
             <td class="action">
-              <a href="{{ .Params.affiliate_url }}" class="btn-table" target="_blank" rel="nofollow sponsored">
+              <a href="{{ $page.Params.affiliate_url }}" class="btn-table" target="_blank" rel="nofollow sponsored">
                 Visit →
               </a>
             </td>
           </tr>
+          {{ end }}
           {{ end }}
         </tbody>
       </table>
