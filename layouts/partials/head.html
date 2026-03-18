@@ -76,8 +76,7 @@
 {{ end }}
 
 <!-- CSS -->
-{{ $style := resources.Get "css/style.css" | minify }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+<link rel="stylesheet" href="/css/style.css">
 
 <!-- Preload Critical Assets -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
