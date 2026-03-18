@@ -26,7 +26,7 @@
   <!-- Affiliate Disclosure -->
   <div class="container">
     <div class="disclosure">
-      ⚠️ <strong>利益声明:</strong> 本页面包含联盟链接。如果您通过以下链接注册/购买，我可能会获得佣金。
+      ⚠️ <strong>Affiliate Disclosure:</strong> This page contains affiliate links. We may earn a commission if you sign up through our links.
     </div>
   </div>
 
@@ -36,19 +36,19 @@
     <div class="container">
       <div class="stats-grid">
         <div class="stat-card">
-          <span class="label">评分</span>
+          <span class="label">Rating</span>
           <span class="value">{{ .Params.rating | default "N/A" }}/5</span>
         </div>
         <div class="stat-card">
-          <span class="label">KYC</span>
-          <span class="value">{{ if .Params.kyc_required }}需要{{ else }}无需{{ end }}</span>
+          <span class="label">KYC Required</span>
+          <span class="value">{{ if .Params.kyc_required }}Yes{{ else }}No{{ end }}</span>
         </div>
         <div class="stat-card">
-          <span class="label">支付频率</span>
+          <span class="label">Payout</span>
           <span class="value">{{ .Params.payment_frequency | default "N/A" }}</span>
         </div>
         <div class="stat-card">
-          <span class="label">最低支付</span>
+          <span class="label">Min Payout</span>
           <span class="value">{{ .Params.min_payout | default "N/A" }}</span>
         </div>
       </div>
@@ -59,7 +59,7 @@
   <section class="cta-section">
     <div class="container">
       <a href="{{ .Params.affiliate_url }}" class="btn-primary btn-large" target="_blank" rel="nofollow sponsored">
-        🔗 访问官网 {{ with .Params.bonus_offer }}(获取{{ . }}){{ end }}
+        🔗 Visit Official Site {{ with .Params.bonus_offer }}({{ . }}){{ end }}
       </a>
     </div>
   </section>
@@ -72,7 +72,7 @@
       <div class="pc-grid">
         {{ if .Params.pros }}
         <div class="pros">
-          <h3>✅ 优点</h3>
+          <h3>✅ Pros</h3>
           <ul>
             {{ range .Params.pros }}
             <li>{{ . }}</li>
@@ -82,7 +82,7 @@
         {{ end }}
         {{ if .Params.cons }}
         <div class="cons">
-          <h3>❌ 缺点</h3>
+          <h3>❌ Cons</h3>
           <ul>
             {{ range .Params.cons }}
             <li>{{ . }}</li>
@@ -111,9 +111,9 @@
         <img src="/images/author.jpg" alt="{{ .Site.Params.author }}" class="author-avatar">
         <div class="author-info">
           <h4>{{ .Site.Params.author }}</h4>
-          <p>专注于VPN、Crypto、Finance领域的独立评测人。</p>
+          <p>Independent reviewer specializing in VPN, Crypto, and Finance products.</p>
           {{ if .Params.lastmod }}
-          <p class="update-time">最后更新: {{ .Params.lastmod }}</p>
+          <p class="update-time">Last updated: {{ .Params.lastmod }}</p>
           {{ end }}
         </div>
       </div>

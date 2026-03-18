@@ -19,12 +19,12 @@
       <table class="top-listings">
         <thead>
           <tr>
-            <th>排名</th>
-            <th>品牌</th>
-            <th>评分</th>
-            <th>亮点</th>
-            <th>优惠</th>
-            <th>操作</th>
+            <th>#</th>
+            <th>Brand</th>
+            <th>Rating</th>
+            <th>Key Features</th>
+            <th>Bonus</th>
+            <th>Visit</th>
           </tr>
         </thead>
         <tbody>
@@ -56,7 +56,7 @@
             <td class="bonus">{{ $page.Params.bonus_offer }}</td>
             <td class="action">
               <a href="{{ $page.Params.affiliate_url }}" class="btn-table" target="_blank" rel="nofollow sponsored">
-                Visit →
+                Get Deal →
               </a>
             </td>
           </tr>
@@ -70,13 +70,13 @@
   <!-- Categories Section -->
   <section class="category-links">
     <div class="container">
-      <h3>更多品类</h3>
+      <h3>Browse by Category</h3>
       <div class="category-grid">
         {{ range .Site.Sections }}
         {{ if ne .Title "Home" }}
         <a href="{{ .Permalink }}" class="category-card">
           <h4>{{ .Title }}</h4>
-          <span class="count">{{ len .Pages }} 个评测</span>
+          <span class="count">{{ len .Pages }} Reviews</span>
         </a>
         {{ end }}
         {{ end }}
