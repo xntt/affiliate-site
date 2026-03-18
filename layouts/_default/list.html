@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+{{ partial "head.html" . }}
+<body>
+{{ partial "header.html" . }}
+
+<main class="hub-page">
+  <!-- Hero -->
+  <section class="hub-hero">
+    <div class="container">
+      <h1>{{ .Title }}</h1>
+      <p class="hub-description">{{ .Description }}</p>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="comparison-table">
+    <div class="container">
+      <table class="top-listings">
+        <thead>
+          <tr>
+            <th>排名</th>
+            <th>品牌</th>
+            <th>评分</th>
+            <th>亮点</th>
+            <th>优惠</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ range $index, $page := .Pages.ByParam "rating" | first 10 }}
+          <tr>
+            <td class="rank">{{ add $index 1 }}</td>
+            <td class="brand">
+              {{ with .Params.logo }}
+              <img src="{{ . }}" alt="{{ .Params.brand }}" class="table-logo">
+              {{ end }}
+              <a href="{{ .Permalink }}">{{ .Params.brand }}</a>
+            </td>
+            <td class="rating">
+              <span class="stars">{{ range seq (int .Params.rating) }}★{{ end }}</span>
+              <span>{{ .Params.rating }}</span>
+            </td>
+            <td class="highlights">
+              <ul>
+                {{ range first 3 .Params.pros }}
+                <li>{{ . }}</li>
+                {{ end }}
+              </ul>
+            </td>
+            <td class="bonus">{{ .Params.bonus_offer }}</td>
+            <td class="action">
+              <a href="{{ .Params.affiliate_url }}" class="btn-table" target="_blank" rel="nofollow sponsored">
+                Visit →
+              </a>
+            </td>
+          </tr>
+          {{ end }}
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="category-links">
+    <div class="container">
+      <h3>更多品类</h3>
+      <div class="category-grid">
+        {{ range .Site.Sections }}
+        {{ if ne .Title "Home" }}
+        <a href="{{ .Permalink }}" class="category-card">
+          <h4>{{ .Title }}</h4>
+          <span class="count">{{ len .Pages }} 个评测</span>
+        </a>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+</main>
+
+{{ partial "footer.html" . }}
+</body>
+</html>

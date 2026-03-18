@@ -1,0 +1,84 @@
+<!-- SEO Head -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+
+<!-- Meta Tags -->
+{{ if .Description }}
+<meta name="description" content="{{ .Description }}">
+{{ else }}
+<meta name="description" content="{{ .Site.Params.description }}">
+{{ end }}
+
+{{ with .Params.keywords }}
+<meta name="keywords" content="{{ . }}">
+{{ end }}
+
+<!-- Canonical -->
+<link rel="canonical" href="{{ .Permalink }}">
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+{{ if .Description }}
+<meta property="og:description" content="{{ .Description }}">
+{{ else }}
+<meta property="og:description" content="{{ .Site.Params.description }}">
+{{ end }}
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{ with .Params.logo }}
+<meta property="og:image" content="{{ . | absURL }}">
+{{ end }}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
+{{ if .Description }}
+<meta name="twitter:description" content="{{ .Description }}">
+{{ end }}
+
+<!-- JSON-LD Schema -->
+{{ if .IsPage }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "name": "{{ .Title }}",
+  "itemReviewed": {
+    "@type": "SoftwareApplication",
+    "name": "{{ .Params.brand }}",
+    "applicationCategory": "SoftwareApplication"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "{{ .Params.rating }}",
+    "bestRating": "5"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "{{ .Site.Params.author }}"
+  },
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "dateModified": "{{ .Params.lastmod }}",
+  "description": "{{ .Description }}"
+}
+</script>
+{{ else }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ .Site.Title }}",
+  "description": "{{ .Site.Params.description }}",
+  "url": "{{ .Site.BaseURL }}"
+}
+</script>
+{{ end }}
+
+<!-- CSS -->
+{{ $style := resources.Get "css/style.css" | minify }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
+<!-- Preload Critical Assets -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
