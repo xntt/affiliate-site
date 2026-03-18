@@ -1,6 +1,7 @@
 baseURL = "https://example-affiliate-site.com/"
 languageCode = "en-us"
 title = "Digital Frontier - Tech & Finance Reviews"
+theme = "placeholder"
 
 [params]
   description = "Reviews of VPN, Crypto Casinos, Finance tools and more"
