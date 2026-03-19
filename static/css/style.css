@@ -115,8 +115,18 @@ body {
 .pros li::before { content: "✓"; position: absolute; left: 0; color: var(--success); font-weight: bold; font-size: 1.1rem; }
 .cons li::before { content: "✗"; position: absolute; left: 0; color: var(--danger); font-weight: bold; font-size: 1.1rem; }
 
-/* Content */
-.review-content { padding: 50px 0; }
+/* Home Content */
+.home-content { padding: 50px 0; }
+.home-content article { max-width: 800px; margin: 0 auto; }
+.home-content h2 { font-size: 1.8rem; color: var(--dark); margin: 32px 0 16px; }
+.home-content h3 { font-size: 1.4rem; color: var(--dark); margin: 24px 0 12px; }
+.home-content p { margin-bottom: 16px; }
+.home-content ul, .home-content ol { margin: 16px 0; padding-left: 24px; }
+.home-content li { margin-bottom: 8px; }
+.home-content table { width: 100%; margin: 24px 0; border-collapse: collapse; }
+.home-content th, .home-content td { padding: 12px; border: 1px solid var(--gray-200); text-align: left; }
+.home-content th { background: var(--gray-100); font-weight: 600; }
+.home-content tr:hover { background: var(--gray-100); }
 .review-content article { background: var(--white); padding: 50px; border-radius: var(--radius); box-shadow: var(--shadow); }
 .review-content h2 { font-size: 2rem; color: var(--dark); margin: 40px 0 20px; padding-bottom: 12px; border-bottom: 2px solid var(--gray-200); }
 .review-content h3 { font-size: 1.5rem; color: var(--dark); margin: 30px 0 15px; }
