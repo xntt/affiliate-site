@@ -13,12 +13,91 @@
     </div>
   </section>
 
-  <!-- Main Content -->
-  <section class="home-content">
+  <!-- Featured Networks -->
+  <section class="featured-networks">
     <div class="container">
-      <article>
-        {{ .Content }}
-      </article>
+      <h2 class="section-title">🔥 Hot This Month</h2>
+      
+      <!-- VPN Section -->
+      <div class="network-category">
+        <h3 class="category-title"><span class="cat-icon">🔐</span> Best VPN Programs</h3>
+        <div class="network-grid">
+          {{ range where (where .Site.RegularPages "Type" "vpn") ".Params.brand" "!=" nil }}
+          <div class="network-card">
+            <div class="card-header">
+              {{ if .Params.logo }}<img src="{{ .Params.logo }}" alt="{{ .Params.brand }}" class="card-logo">{{ end }}
+              <h4>{{ .Params.brand }}</h4>
+            </div>
+            <div class="card-stats">
+              <div class="stat"><span class="stat-label">Commission</span><span class="stat-value">{{ .Params.bonus_offer }}</span></div>
+              <div class="stat"><span class="stat-label">Rating</span><span class="stat-value">{{ .Params.rating }}/5</span></div>
+            </div>
+            <a href="{{ .Params.affiliate_url }}" class="btn-join" target="_blank" rel="nofollow sponsored">Join Now →</a>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+      <!-- Casino Section -->
+      <div class="network-category">
+        <h3 class="category-title"><span class="cat-icon">🎰</span> Top Crypto Casinos</h3>
+        <div class="network-grid">
+          {{ range where (where .Site.RegularPages "Type" "crypto-casinos") ".Params.brand" "!=" nil }}
+          <div class="network-card">
+            <div class="card-header">
+              {{ if .Params.logo }}<img src="{{ .Params.logo }}" alt="{{ .Params.brand }}" class="card-logo">{{ end }}
+              <h4>{{ .Params.brand }}</h4>
+            </div>
+            <div class="card-stats">
+              <div class="stat"><span class="stat-label">Commission</span><span class="stat-value">{{ .Params.bonus_offer }}</span></div>
+              <div class="stat"><span class="stat-label">Rating</span><span class="stat-value">{{ .Params.rating }}/5</span></div>
+            </div>
+            <a href="{{ .Params.affiliate_url }}" class="btn-join" target="_blank" rel="nofollow sponsored">Join Now →</a>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+      <!-- Finance Section -->
+      <div class="network-category">
+        <h3 class="category-title"><span class="cat-icon">💰</span> Top Finance Programs</h3>
+        <div class="network-grid">
+          {{ range where (where .Site.RegularPages "Type" "finance") ".Params.brand" "!=" nil }}
+          <div class="network-card">
+            <div class="card-header">
+              {{ if .Params.logo }}<img src="{{ .Params.logo }}" alt="{{ .Params.brand }}" class="card-logo">{{ end }}
+              <h4>{{ .Params.brand }}</h4>
+            </div>
+            <div class="card-stats">
+              <div class="stat"><span class="stat-label">Commission</span><span class="stat-value">{{ .Params.bonus_offer }}</span></div>
+              <div class="stat"><span class="stat-label">Rating</span><span class="stat-value">{{ .Params.rating }}/5</span></div>
+            </div>
+            <a href="{{ .Params.affiliate_url }}" class="btn-join" target="_blank" rel="nofollow sponsored">Join Now →</a>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
+      <!-- Dating Section -->
+      <div class="network-category">
+        <h3 class="category-title"><span class="cat-icon">💕</span> Top Dating Offers</h3>
+        <div class="network-grid">
+          {{ range where (where .Site.RegularPages "Type" "dating") ".Params.brand" "!=" nil }}
+          <div class="network-card">
+            <div class="card-header">
+              {{ if .Params.logo }}<img src="{{ .Params.logo }}" alt="{{ .Params.brand }}" class="card-logo">{{ end }}
+              <h4>{{ .Params.brand }}</h4>
+            </div>
+            <div class="card-stats">
+              <div class="stat"><span class="stat-label">Commission</span><span class="stat-value">{{ .Params.bonus_offer }}</span></div>
+              <div class="stat"><span class="stat-label">Rating</span><span class="stat-value">{{ .Params.rating }}/5</span></div>
+            </div>
+            <a href="{{ .Params.affiliate_url }}" class="btn-join" target="_blank" rel="nofollow sponsored">Join Now →</a>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+
     </div>
   </section>
 
