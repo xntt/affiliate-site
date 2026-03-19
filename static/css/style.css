@@ -117,7 +117,7 @@ body {
 
 /* Home Content */
 .home-content { padding: 50px 0; }
-.home-content article { max-width: 800px; margin: 0 auto; }
+.home-content article { max-width: 800px; margin: 0 auto; background: var(--white); padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow); }
 .home-content h2 { font-size: 1.8rem; color: var(--dark); margin: 32px 0 16px; }
 .home-content h3 { font-size: 1.4rem; color: var(--dark); margin: 24px 0 12px; }
 .home-content p { margin-bottom: 16px; }
