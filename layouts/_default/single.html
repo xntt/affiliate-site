@@ -10,15 +10,13 @@
     <div class="container">
       <div class="brand-header">
         {{ with .Params.logo }}
-        <img src="{{ . }}" alt="{{ $.Params.brand }}" class="brand-logo">
+        <img src="{{ . }}" alt="{{ .Params.brand }}" class="brand-logo">
         {{ end }}
         <h1>{{ .Title }}</h1>
-        {{ if .Params.rating }}
         <div class="rating-badge">
           <span class="stars">{{ range seq (int .Params.rating) }}★{{ end }}</span>
           <span class="rating-number">{{ .Params.rating }}/5</span>
         </div>
-        {{ end }}
       </div>
     </div>
   </section>
@@ -26,30 +24,29 @@
   <!-- Affiliate Disclosure -->
   <div class="container">
     <div class="disclosure">
-      ⚠️ <strong>Affiliate Disclosure:</strong> This page contains affiliate links. We may earn a commission if you sign up through our links.
+      ⚠️ <strong>利益声明:</strong> 本页面包含联盟链接。如果您通过以下链接注册/购买，我可能会获得佣金。
     </div>
   </div>
 
   <!-- Quick Stats -->
-  {{ if .Params.brand }}
   <section class="quick-stats">
     <div class="container">
       <div class="stats-grid">
         <div class="stat-card">
-          <span class="label">Rating</span>
-          <span class="value">{{ .Params.rating | default "N/A" }}/5</span>
+          <span class="label">评分</span>
+          <span class="value">{{ .Params.rating }}/5</span>
         </div>
         <div class="stat-card">
-          <span class="label">KYC Required</span>
-          <span class="value">{{ if .Params.kyc_required }}Yes{{ else }}No{{ end }}</span>
+          <span class="label">KYC</span>
+          <span class="value">{{ if .Params.kyc_required }}需要{{ else }}无需{{ end }}</span>
         </div>
         <div class="stat-card">
-          <span class="label">Payout</span>
-          <span class="value">{{ .Params.payment_frequency | default "N/A" }}</span>
+          <span class="label">支付频率</span>
+          <span class="value">{{ .Params.payment_frequency }}</span>
         </div>
         <div class="stat-card">
-          <span class="label">Min Payout</span>
-          <span class="value">{{ .Params.min_payout | default "N/A" }}</span>
+          <span class="label">最低支付</span>
+          <span class="value">{{ .Params.min_payout }}</span>
         </div>
       </div>
     </div>
@@ -59,41 +56,35 @@
   <section class="cta-section">
     <div class="container">
       <a href="{{ .Params.affiliate_url }}" class="btn-primary btn-large" target="_blank" rel="nofollow sponsored">
-        🔗 Visit Official Site {{ with .Params.bonus_offer }}({{ . }}){{ end }}
+        🔗 访问官网 (获取{{ .Params.bonus_offer }})
       </a>
+      <p class="cta-note">* {{ .Params.bonus_offer }}</p>
     </div>
   </section>
-  {{ end }}
 
   <!-- Pros & Cons -->
-  {{ if or .Params.pros .Params.cons }}
   <section class="pros-cons">
     <div class="container">
       <div class="pc-grid">
-        {{ if .Params.pros }}
         <div class="pros">
-          <h3>✅ Pros</h3>
+          <h3>✅ 优点</h3>
           <ul>
             {{ range .Params.pros }}
             <li>{{ . }}</li>
             {{ end }}
           </ul>
         </div>
-        {{ end }}
-        {{ if .Params.cons }}
         <div class="cons">
-          <h3>❌ Cons</h3>
+          <h3>❌ 缺点</h3>
           <ul>
             {{ range .Params.cons }}
             <li>{{ . }}</li>
             {{ end }}
           </ul>
         </div>
-        {{ end }}
       </div>
     </div>
   </section>
-  {{ end }}
 
   <!-- Content -->
   <section class="review-content">
@@ -104,6 +95,14 @@
     </div>
   </section>
 
+  <!-- FAQ Schema预留 -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>常见问题</h2>
+      {{ .TableOfContents }}
+    </div>
+  </section>
+
   <!-- Author Box -->
   <section class="author-box">
     <div class="container">
@@ -111,11 +110,28 @@
         <img src="/images/author.jpg" alt="{{ .Site.Params.author }}" class="author-avatar">
         <div class="author-info">
           <h4>{{ .Site.Params.author }}</h4>
-          <p>Independent reviewer specializing in VPN, Crypto, and Finance products.</p>
-          {{ if .Params.lastmod }}
-          <p class="update-time">Last updated: {{ .Params.lastmod }}</p>
-          {{ end }}
+          <p>专注于VPN、Crypto、Finance领域的独立评测人。</p>
+          <p class="update-time">最后更新: {{ .Params.lastmod }}</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Reviews -->
+  <section class="related-reviews">
+    <div class="container">
+      <h3>相关评测</h3>
+      <div class="related-grid">
+        {{ $related := .Site.RegularPages.Related . | first 3 }}
+        {{ range $related }}
+        <a href="{{ .Permalink }}" class="related-card">
+          {{ with .Params.logo }}
+          <img src="{{ . }}" alt="{{ .Params.brand }}">
+          {{ end }}
+          <h4>{{ .Title }}</h4>
+          <span class="rating">{{ .Params.rating }}/5</span>
+        </a>
+        {{ end }}
       </div>
     </div>
   </section>

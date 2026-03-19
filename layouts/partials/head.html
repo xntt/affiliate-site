@@ -75,11 +75,9 @@
 </script>
 {{ end }}
 
-<!-- Favicon -->
-<link rel="icon" type="image/svg+xml" href="/images/logo.svg">
-
 <!-- CSS -->
-<link rel="stylesheet" href="/css/style.css">
+{{ $style := resources.Get "css/style.css" | minify }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
 <!-- Preload Critical Assets -->
 <link rel="preconnect" href="https://fonts.googleapis.com">

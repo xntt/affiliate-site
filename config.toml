@@ -1,12 +1,17 @@
-baseURL = "https://yieldedge.co/"
+baseURL = "https://example-affiliate-site.com/"
 languageCode = "en-us"
-title = "YieldEdge - Best Affiliate Programs Reviews"
+title = "Digital Frontier - Tech & Finance Reviews"
+theme = ""
 
 [params]
-  description = "Discover top-rated VPN, Crypto Casino, Finance and Dating affiliate programs. Compare commissions and find your perfect partner."
+  description = "Reviews of VPN, Crypto Casinos, Finance tools and more"
   author = "Your Name"
   email = "contact@example.com"
-
+  site_logo = "/images/logo.png"
+  
+[params.social]
+  twitter = "@yourhandle"
+  
 [taxonomies]
   category = "categories"
   tag = "tags"

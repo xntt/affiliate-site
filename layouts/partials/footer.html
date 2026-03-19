@@ -6,7 +6,7 @@
         <p>{{ .Site.Params.description }}</p>
       </div>
       <div class="footer-section">
-        <h4>Quick Links</h4>
+        <h4>快速链接</h4>
         <nav>
           {{ range .Site.Sections }}
           <a href="{{ .Permalink }}">{{ .Title }}</a>
@@ -14,7 +14,7 @@
         </nav>
       </div>
       <div class="footer-section">
-        <h4>Legal</h4>
+        <h4>法律信息</h4>
         <a href="/privacy">Privacy Policy</a>
         <a href="/terms">Terms of Service</a>
         <a href="/disclosure">Affiliate Disclosure</a>
@@ -22,7 +22,7 @@
     </div>
     <div class="footer-bottom">
       <p>© {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
-      <p class="disclaimer">This site contains affiliate links. We may earn commissions from recommended products.</p>
+      <p class="disclaimer">本页面包含联盟链接。透過链接注册可能获得佣金。</p>
     </div>
   </div>
 </footer>

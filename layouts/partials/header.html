@@ -1,14 +1,18 @@
 <header class="site-header">
   <div class="container">
     <a href="/" class="logo">
-      <img src="/images/logo.svg" alt="YieldEdge" class="logo-img">
-      <span class="logo-text">YieldEdge</span>
+      {{ with .Site.Params.site_logo }}
+      <img src="{{ . }}" alt="{{ $.Site.Title }}">
+      {{ else }}
+      {{ .Site.Title }}
+      {{ end }}
     </a>
     <nav class="main-nav">
-      <a href="/vpn/">VPN</a>
-      <a href="/crypto-casinos/">Casinos</a>
-      <a href="/finance/">Finance</a>
-      <a href="/dating/">Dating</a>
+      {{ range .Site.Sections }}
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      {{ end }}
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
     </nav>
   </div>
 </header>
