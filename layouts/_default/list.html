@@ -4,7 +4,7 @@
 <body>
 {{ partial "header.html" . }}
 
-<main class="hub-page">
+<main>
   <!-- Hero -->
   <section class="hub-hero">
     <div class="container">
@@ -13,74 +13,10 @@
     </div>
   </section>
 
-  <!-- Comparison Table -->
-  <section class="comparison-table">
+  <!-- Content -->
+  <section class="home-content">
     <div class="container">
-      <table class="top-listings">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Brand</th>
-            <th>Rating</th>
-            <th>Key Features</th>
-            <th>Bonus</th>
-            <th>Visit</th>
-          </tr>
-        </thead>
-        <tbody>
-          {{ range $index, $page := .Pages.ByParam "rating" | first 10 }}
-          {{ if $page.Params.brand }}
-          <tr>
-            <td class="rank">{{ add $index 1 }}</td>
-            <td class="brand">
-              {{ with $page.Params.logo }}
-              <img src="{{ . }}" alt="{{ $page.Params.brand }}" class="table-logo">
-              {{ end }}
-              <a href="{{ $page.Permalink }}">{{ $page.Params.brand }}</a>
-            </td>
-            <td class="rating">
-              {{ if $page.Params.rating }}
-              <span class="stars">{{ range seq (int $page.Params.rating) }}★{{ end }}</span>
-              <span>{{ $page.Params.rating }}</span>
-              {{ else }}
-              <span>-</span>
-              {{ end }}
-            </td>
-            <td class="highlights">
-              <ul>
-                {{ range first 3 $page.Params.pros }}
-                <li>{{ . }}</li>
-                {{ end }}
-              </ul>
-            </td>
-            <td class="bonus">{{ $page.Params.bonus_offer }}</td>
-            <td class="action">
-              <a href="{{ $page.Params.affiliate_url }}" class="btn-table" target="_blank" rel="nofollow sponsored">
-                Get Deal →
-              </a>
-            </td>
-          </tr>
-          {{ end }}
-          {{ end }}
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- Categories Section -->
-  <section class="category-links">
-    <div class="container">
-      <h3>Browse by Category</h3>
-      <div class="category-grid">
-        {{ range .Site.Sections }}
-        {{ if ne .Title "Home" }}
-        <a href="{{ .Permalink }}" class="category-card">
-          <h4>{{ .Title }}</h4>
-          <span class="count">{{ len .Pages }} Reviews</span>
-        </a>
-        {{ end }}
-        {{ end }}
-      </div>
+      {{ .Content }}
     </div>
   </section>
 </main>
