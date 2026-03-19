@@ -8,7 +8,7 @@ affiliate_url: "#"
 bonus_offer: "49% OFF + 3 months FREE"
 pros:
   - "Fastest speeds"
-  - "3000+ servers in 94 countries"
+  - "3,000+ servers in 94 countries"
   - "Best-in-class encryption"
   - "24/7 live chat"
   - "Works with Netflix"
