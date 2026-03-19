@@ -4,7 +4,7 @@ description: "BC.Game casino review - Popular crypto casino with unique features
 brand: "BC.Game"
 logo: "/images/casino/bcgame.png"
 rating: 4.8
-affiliate_url: "#"
+affiliate_url: "https://partners.bc.game"
 bonus_offer: "Up to 180% welcome bonus"
 pros:
   - "Massive player base"

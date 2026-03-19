@@ -4,7 +4,7 @@ description: "Surfshark VPN review - Affordable pricing with unlimited device co
 brand: "Surfshark"
 logo: "/images/vpn/surfshark.png"
 rating: 4.6
-affiliate_url: "#"
+affiliate_url: "https://affiliates.surfshark.com"
 bonus_offer: "82% OFF + 3 months FREE"
 pros:
   - "Unlimited simultaneous connections"

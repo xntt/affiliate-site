@@ -4,7 +4,7 @@ description: "ExpressVPN review - Premium VPN service with fastest speeds"
 brand: "ExpressVPN"
 logo: "/images/vpn/expressvpn.png"
 rating: 4.9
-affiliate_url: "#"
+affiliate_url: "https://www.expressaffiliates.com"
 bonus_offer: "49% OFF + 3 months FREE"
 pros:
   - "Fastest speeds"
