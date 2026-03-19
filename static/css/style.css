@@ -55,6 +55,15 @@ body {
 .site-header .main-nav a:hover::after { width: 100%; }
 
 /* Hero Sections */
+.hero { 
+    background: var(--gradient-hero); 
+    color: var(--white); 
+    padding: 120px 0 60px; 
+    text-align: center; 
+}
+.hero h1 { font-size: 2.5rem; margin-bottom: 16px; font-weight: 800; }
+.hero p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+
 .review-hero, .hub-hero { 
     background: var(--gradient-hero); 
     color: var(--white); 
@@ -141,6 +150,15 @@ body {
 .btn-table:hover { background: var(--primary-dark); transform: translateY(-2px); }
 
 /* Category Links */
+.category-links { padding: 50px 0; }
+.category-links h3 { text-align: center; margin-bottom: 40px; font-size: 1.8rem; color: var(--dark); }
+.category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+.category-card { display: block; background: var(--white); padding: 30px 24px; border-radius: var(--radius); text-decoration: none; text-align: center; box-shadow: var(--shadow); transition: var(--transition); }
+.category-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.category-card h4 { color: var(--dark); margin-bottom: 8px; font-size: 1.1rem; }
+.category-card .count { font-size: 0.9rem; color: var(--gray-500); }
+.category-icon { display: block; font-size: 2.5rem; margin-bottom: 12px; }
+.category-name { display: block; font-weight: 600; color: var(--dark); }
 .category-links { padding: 50px 0; background: var(--gray-100); }
 .category-links h3 { text-align: center; margin-bottom: 40px; font-size: 1.8rem; color: var(--dark); }
 .category-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
