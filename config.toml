@@ -1,17 +1,12 @@
 baseURL = "https://yieldedge.co/"
 languageCode = "en-us"
-title = "Digital Frontier - Tech & Finance Reviews"
-theme = "placeholder"
+title = "YieldEdge - Best Affiliate Programs Reviews"
 
 [params]
-  description = "Reviews of VPN, Crypto Casinos, Finance tools and more"
+  description = "Discover top-rated VPN, Crypto Casino, Finance and Dating affiliate programs. Compare commissions and find your perfect partner."
   author = "Your Name"
   email = "contact@example.com"
-  site_logo = "/images/logo.png"
-  
-[params.social]
-  twitter = "@yourhandle"
-  
+
 [taxonomies]
   category = "categories"
   tag = "tags"
