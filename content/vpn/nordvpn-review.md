@@ -4,7 +4,7 @@ description: "NordVPN review - 6,000+ servers, military-grade encryption, best p
 brand: "NordVPN"
 logo: "/images/vpn/nordvpn.png"
 rating: 4.8
-affiliate_url: "https://affiliate.nordvpn.com"
+affiliate_url: "#"
 bonus_offer: "68% OFF + 3 months FREE"
 pros:
   - "6,000+ servers in 60+ countries"

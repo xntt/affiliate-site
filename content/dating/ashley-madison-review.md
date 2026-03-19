@@ -4,7 +4,7 @@ description: "Ashley Madison dating affiliate program review"
 brand: "Ashley Madison"
 logo: "/images/dating/ashleymadison.png"
 rating: 4.3
-affiliate_url: "https://www.affiliate.com/ashleymadison"
+affiliate_url: "#"
 bonus_offer: "CPA up to $90 per sale"
 pros:
   - "High CPA rates"

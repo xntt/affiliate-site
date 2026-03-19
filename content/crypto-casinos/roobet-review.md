@@ -4,7 +4,7 @@ description: "Roobet casino review - Premium crypto gambling platform"
 brand: "Roobet"
 logo: "/images/casino/roobet.png"
 rating: 4.7
-affiliate_url: "https://roobetpartners.com"
+affiliate_url: "#"
 bonus_offer: "Welcome bonus up to $1000"
 pros:
   - "Premium branding"
