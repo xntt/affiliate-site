@@ -25,7 +25,7 @@
           {{ range where (where .Site.RegularPages "Type" "vpn") ".Params.brand" "!=" nil }}
           <div class="network-card">
             <div class="card-header">
-              {{ if .Params.logo }}<img src="{{ .Params.logo }}" alt="{{ .Params.brand }}" class="card-logo">{{ end }}
+              <span class="card-emoji">🔐</span>
               <h4>{{ .Params.brand }}</h4>
             </div>
             <div class="card-stats">
@@ -45,7 +45,7 @@
           {{ range where (where .Site.RegularPages "Type" "crypto-casinos") ".Params.brand" "!=" nil }}
           <div class="network-card">
             <div class="card-header">
-              {{ if .Params.logo }}<img src="{{ .Params.logo }}" alt="{{ .Params.brand }}" class="card-logo">{{ end }}
+              <span class="card-emoji">🎰</span>
               <h4>{{ .Params.brand }}</h4>
             </div>
             <div class="card-stats">
@@ -65,7 +65,7 @@
           {{ range where (where .Site.RegularPages "Type" "finance") ".Params.brand" "!=" nil }}
           <div class="network-card">
             <div class="card-header">
-              {{ if .Params.logo }}<img src="{{ .Params.logo }}" alt="{{ .Params.brand }}" class="card-logo">{{ end }}
+              <span class="card-emoji">💰</span>
               <h4>{{ .Params.brand }}</h4>
             </div>
             <div class="card-stats">
@@ -85,7 +85,7 @@
           {{ range where (where .Site.RegularPages "Type" "dating") ".Params.brand" "!=" nil }}
           <div class="network-card">
             <div class="card-header">
-              {{ if .Params.logo }}<img src="{{ .Params.logo }}" alt="{{ .Params.brand }}" class="card-logo">{{ end }}
+              <span class="card-emoji">💕</span>
               <h4>{{ .Params.brand }}</h4>
             </div>
             <div class="card-stats">
