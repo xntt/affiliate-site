@@ -9,8 +9,16 @@
   <section class="review-hero">
     <div class="container">
       <div class="brand-header">
-        {{ with .Params.logo }}
-        <img src="{{ . }}" alt="{{ $.Params.brand }}" class="brand-logo">
+        {{ if eq .Section "vpn" }}
+        <div class="brand-emoji">🔐</div>
+        {{ else if eq .Section "crypto-casinos" }}
+        <div class="brand-emoji">🎰</div>
+        {{ else if eq .Section "finance" }}
+        <div class="brand-emoji">💰</div>
+        {{ else if eq .Section "dating" }}
+        <div class="brand-emoji">💕</div>
+        {{ else }}
+        <div class="brand-emoji">🏷️</div>
         {{ end }}
         <h1>{{ .Title }}</h1>
         {{ if .Params.rating }}
@@ -108,7 +116,7 @@
   <section class="author-box">
     <div class="container">
       <div class="author-card">
-        <img src="/images/author.jpg" alt="{{ .Site.Params.author }}" class="author-avatar">
+        <div class="author-avatar">👤</div>
         <div class="author-info">
           <h4>{{ .Site.Params.author }}</h4>
           <p>Independent reviewer specializing in VPN, Crypto, and Finance products.</p>
