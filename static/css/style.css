@@ -150,6 +150,7 @@ body {
 .top-listings tr:hover { background: var(--gray-100); }
 .top-listings .rank { font-size: 1.5rem; font-weight: 800; color: var(--primary); }
 .top-listings .table-logo { width: 48px; height: 48px; object-fit: contain; margin-right: 12px; vertical-align: middle; border-radius: 8px; }
+.table-emoji { font-size: 1.8rem; margin-right: 8px; vertical-align: middle; }
 .top-listings .brand { display: flex; align-items: center; }
 .top-listings .brand a { color: var(--dark); font-weight: 700; text-decoration: none; font-size: 1.05rem; transition: var(--transition); }
 .top-listings .brand a:hover { color: var(--primary); }

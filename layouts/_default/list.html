@@ -33,9 +33,14 @@
           <tr>
             <td class="rank">{{ add $index 1 }}</td>
             <td class="brand">
-              {{ with $page.Params.logo }}
-              <img src="{{ . }}" alt="{{ $page.Params.brand }}" class="table-logo">
-              {{ end }}
+              <span class="table-emoji">
+                {{ if eq $page.Section "vpn" }}🔐
+                {{ else if eq $page.Section "crypto-casinos" }}🎰
+                {{ else if eq $page.Section "finance" }}💰
+                {{ else if eq $page.Section "dating" }}💕
+                {{ else }}🏷️
+                {{ end }}
+              </span>
               <a href="{{ $page.Permalink }}">{{ $page.Params.brand }}</a>
             </td>
             <td class="rating">
