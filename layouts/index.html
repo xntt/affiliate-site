@@ -24,6 +24,7 @@
         <div class="network-grid">
           {{ range where (where .Site.RegularPages "Type" "vpn") ".Params.brand" "!=" nil }}
           <div class="network-card">
+            <a href="{{ .Permalink }}" class="card-link"></a>
             <div class="card-header">
               <span class="card-emoji">🔐</span>
               <h4>{{ .Params.brand }}</h4>
@@ -44,6 +45,7 @@
         <div class="network-grid">
           {{ range where (where .Site.RegularPages "Type" "crypto-casinos") ".Params.brand" "!=" nil }}
           <div class="network-card">
+            <a href="{{ .Permalink }}" class="card-link"></a>
             <div class="card-header">
               <span class="card-emoji">🎰</span>
               <h4>{{ .Params.brand }}</h4>
@@ -64,6 +66,7 @@
         <div class="network-grid">
           {{ range where (where .Site.RegularPages "Type" "finance") ".Params.brand" "!=" nil }}
           <div class="network-card">
+            <a href="{{ .Permalink }}" class="card-link"></a>
             <div class="card-header">
               <span class="card-emoji">💰</span>
               <h4>{{ .Params.brand }}</h4>
@@ -84,6 +87,7 @@
         <div class="network-grid">
           {{ range where (where .Site.RegularPages "Type" "dating") ".Params.brand" "!=" nil }}
           <div class="network-card">
+            <a href="{{ .Permalink }}" class="card-link"></a>
             <div class="card-header">
               <span class="card-emoji">💕</span>
               <h4>{{ .Params.brand }}</h4>
