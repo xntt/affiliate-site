@@ -4,7 +4,7 @@ description: "Binance exchange review - World's largest crypto exchange by volum
 brand: "Binance"
 logo: "/images/finance/binance.png"
 rating: 4.7
-affiliate_url: "https://binance.com/?ref=your_id"
+affiliate_url: "https://www.bsmkweb.cc/activity/referral-entry/CPA?ref=CPA_001R19PUEG"
 bonus_offer: "20% fee discount + $100 bonus"
 pros:
   - "World's largest exchange"

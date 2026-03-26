@@ -4,7 +4,7 @@ description: "Stake casino review - Premier crypto gambling platform with sports
 brand: "Stake"
 logo: "/images/casino/stake.png"
 rating: 4.9
-affiliate_url: "https://stake.com/?c=your_id"
+affiliate_url: "https://stake.com/?c=fUyJML3C"
 bonus_offer: "$1000 welcome bonus + weekly rakeback"
 pros:
   - "Massive game selection (3000+ games)"
