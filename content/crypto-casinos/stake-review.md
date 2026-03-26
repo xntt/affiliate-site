@@ -1,13 +1,13 @@
 ---
-title: "Stake Casino Review 2024"
+title: "Stake Casino Review 2026"
 description: "Stake casino review - Premier crypto gambling platform with sports betting"
 brand: "Stake"
 logo: "/images/casino/stake.png"
 rating: 4.9
 affiliate_url: "https://stake.com/?c=fUyJML3C"
-bonus_offer: "$1000 welcome bonus + weekly rakeback"
+bonus_offer: "200% up to $1000 + 50% rakeback"
 pros:
-  - "Massive game selection (3000+ games)"
+  - "Massive game selection (5000+ games)"
   - "Sports betting included"
   - "Instant crypto withdrawals"
   - "Excellent VIP program"
@@ -18,8 +18,8 @@ cons:
 kyc_required: false
 payment_frequency: "Instant"
 min_payout: "$10"
-date: 2024-01-20
-lastmod: 2024-03-15
+date: 2026-01-20
+lastmod: 2026-03-26
 ---
 
 ## Overview
@@ -29,17 +29,17 @@ Stake is one of the most popular crypto casinos in the world, offering an unpara
 ## Game Selection
 
 Stake offers an impressive variety:
-- **Slots** - 3000+ titles from top providers
+- **Slots** - 5000+ titles from top providers
 - **Live Casino** - Evolution, Pragmatic Play
 - **Original Games** - Stake-exclusive titles
-- **Sports Betting** - 30+ sports, live betting
+- **Sports Betting** - 40+ sports, live betting
 
 ## Payments
 
 Stake supports:
 - Bitcoin, Ethereum, Litecoin
 - Dogecoin, XRP, Solana
-- And 20+ other cryptocurrencies
+- And 30+ other cryptocurrencies
 - Instant withdrawals
 
 ## Why Affiliates Love Stake

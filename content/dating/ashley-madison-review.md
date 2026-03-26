@@ -1,5 +1,5 @@
 ---
-title: "Ashley Madison Review 2024"
+title: "Ashley Madison Review 2026"
 description: "Ashley Madison dating affiliate program review"
 brand: "Ashley Madison"
 logo: "/images/dating/ashleymadison.png"
@@ -17,8 +17,8 @@ cons:
 kyc_required: false
 payment_frequency: "Weekly"
 min_payout: "$100"
-date: 2024-02-01
-lastmod: 2024-03-10
+date: 2026-02-01
+lastmod: 2026-03-26
 ---
 
 ## Overview

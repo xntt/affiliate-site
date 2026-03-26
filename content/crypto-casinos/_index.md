@@ -1,10 +1,10 @@
 ---
 title: "Crypto Casino Affiliate Programs"
 description: "Best crypto casino affiliate programs - Stake, BC.Game, Roobet - Up to 50% revenue share."
-date: 2024-01-01
+date: 2026-01-01
 ---
 
-# Best Crypto Casino Affiliate Programs 2024
+# Best Crypto Casino Affiliate Programs 2026
 
 Promote the leading crypto gambling platforms and earn industry-leading revenue share.
 

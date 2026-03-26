@@ -1,15 +1,15 @@
 ---
-title: "Roobet Casino Review 2024"
+title: "Roobet Casino Review 2026"
 description: "Roobet casino review - Premium crypto gambling platform"
 brand: "Roobet"
 logo: "/images/casino/roobet.png"
 rating: 4.7
 affiliate_url: "https://roobet.com/?ref=bistr"
-bonus_offer: "Welcome bonus up to $1000"
+bonus_offer: "100% up to $500 + 50 free spins"
 pros:
   - "Premium branding"
   - "Fast payments"
-  - "Quality games"
+  - "Quality games (5000+)"
   - "Great conversions"
 cons:
   - "Limited countries"
@@ -17,8 +17,8 @@ cons:
 kyc_required: false
 payment_frequency: "Instant"
 min_payout: "$20"
-date: 2024-01-28
-lastmod: 2024-03-10
+date: 2026-01-28
+lastmod: 2026-03-26
 ---
 
 ## Overview

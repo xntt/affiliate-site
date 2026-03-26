@@ -1,5 +1,5 @@
 ---
-title: "Surfshark VPN Review 2024"
+title: "Surfshark VPN Review 2026"
 description: "Surfshark VPN review - Affordable pricing with unlimited device connections"
 brand: "Surfshark"
 logo: "/images/vpn/surfshark.png"
@@ -18,8 +18,8 @@ cons:
 kyc_required: false
 payment_frequency: "Weekly"
 min_payout: "$10"
-date: 2024-01-15
-lastmod: 2024-03-10
+date: 2026-01-15
+lastmod: 2026-03-26
 ---
 
 ## Overview
@@ -36,10 +36,10 @@ Surfshark offers a comprehensive suite of features:
 
 ## Pricing
 
-Surfshark offers competitive pricing:
-- Monthly: $12.95/month
-- 12-month: $2.49/month
-- 24-month: $1.99/month
+Surfshark pricing (2026):
+- Monthly: $12.99/month
+- 1-year: $47.88/year ($3.99/month)
+- 2-year: $59.76/2 years ($2.49/month)
 
 ## Conclusion
 
